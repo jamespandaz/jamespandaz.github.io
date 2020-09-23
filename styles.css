@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@300;700&display=swap'); /*import fonts */
 
 body{
+    font-family: 'Montserrat Subrayada', sans-serif; 
     background-color: black;
     margin: 0px;
 }
 
 #backgroundTitleVideo{
-    display: none;
-    
     position: fixed;
     right: 0;
     bottom: 0;
@@ -18,12 +17,12 @@ body{
     z-index: -1;
 }
 
-#heading{
+#home {
     display: none;
-    
-    font-family: 'Montserrat Subrayada', sans-serif; 
-    color: white;
+}
 
+#heading{
+    color: white;
     position: fixed;
     text-align: center;
     top: 50%;
@@ -40,15 +39,15 @@ body{
     margin-bottom: 5px;
 }
 
-#aboutUs h1{
+#aboutUs {
     display: none;
+}
 
+#aboutUs h1{
     color: white;
 }
 
 #aboutUs p{
-    display: none;
-
     color: white;
 }
 
@@ -74,8 +73,6 @@ body{
 }
 
 #logo img{
-    display: none;
-
     position: fixed;
     width: 100px;
     height: 100px;
