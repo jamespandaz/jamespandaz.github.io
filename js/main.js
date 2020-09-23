@@ -1,42 +1,31 @@
+var acceptedHash = ['#home', '#aboutUs'];
+
 $(document).ready(function(){
-    var currentHash = location.hash;
-    currentHash = "#home";
-    homePageShow();
 
-    $(window).on("hashchange", function(){
-        currentHash = location.hash;
-        console.log(currentHash);
-        
-        if (currentHash == "#home"){
-            aboutUsHide();
-            homePageShow();
-        }
-
-        if (currentHash == "#aboutus"){
-            homePageHide();
-            aboutUsShow();
-        }
-    })
-
-
+    // If trying to access hash that is not included in acceptedHash array
+    // redirect to home page
+    if(!acceptedHash.includes(window.location.hash)) {
+        window.location.hash = '#home'
+    }
+    
+    $(window.location.hash).fadeToggle();
 });
 
-function homePageShow(){
-    $('#backgroundTitleVideo').fadeIn();
-    $('#heading').fadeIn();
-    $('#logo img').fadeIn();
-}
+$(window).on("hashchange", function(e){
+    console.log(e.originalEvent.oldURL.split('index.html')[1])
+    console.log(e.originalEvent.newURL.split('index.html')[1])
 
-function homePageHide(){
-    $('#backgroundTitleVideo').fadeOut();
-    $('#heading').fadeOut();
-    $('#logo img').fadeOut();
-}
+    let newHash = e.originalEvent.newURL.split('index.html')[1];
+    let oldHash = e.originalEvent.oldURL.split('index.html')[1];
 
-function aboutUsShow(){
-    $("#aboutUs").fadeIn();
-}
+    // If trying to access hash that is not included in acceptedHash array
+    // redirect to home page
+    if(!acceptedHash.includes(newHash)) {
+        window.location.hash = '#home'
+    }
+    
+    $(newHash).fadeToggle();
+    $(oldHash).fadeToggle();
 
-function aboutUsHide(){
-    $("#aboutUs").fadeOut();
-}
+})
+
