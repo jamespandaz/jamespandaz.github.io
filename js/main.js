@@ -1,4 +1,4 @@
-var acceptedHash = ['#home', '#aboutUs'];
+var acceptedHash = ['#home', '#aboutUs', '#findArtists', '#artOf', '#contact', '#thankYou'];
 
 $(document).ready(function(){
 
@@ -28,8 +28,10 @@ $(window).on("hashchange", function(e){
         oldHash = '#home';
     }
     
-    $(oldHash).fadeToggle();
-    $(newHash).fadeToggle();
+    $(oldHash).fadeToggle().promise().done(function(){
+        $(newHash).fadeToggle();
+    });
+
 
 })
 

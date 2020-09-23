@@ -6,6 +6,11 @@ body{
     margin: 0px;
 }
 
+h1{
+    text-align: center;
+    color: white
+}
+
 #backgroundTitleVideo{
     position: fixed;
     right: 0;
@@ -17,8 +22,62 @@ body{
     z-index: -1;
 }
 
+#backgroundTitleVideo{
+    color: white;
+    text-align: right;
+    padding: 14px;
+}
+
+#backgroundTitleVideo a, a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+#backgroundTitleVideo a:hover{
+    color: #707a7e;
+}
+
+#navMenu{
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    background-color: black;
+    margin: 0px;
+    z-index: 1;
+}
+
+#navMenu a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    font-weight: 500;
+    padding: 14px;
+    text-decoration: none;
+}
+
+#navMenu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navMenu a:hover{
+    color: #bccad0;
+    background-color: #707a7e;
+}
+
 #home {
     display: none;
+}
+
+#logo img{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    z-index: 1; 
 }
 
 #heading{
@@ -43,41 +102,17 @@ body{
     display: none;
 }
 
-#aboutUs h1{
-    color: white;
-}
 
 #aboutUs p{
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: 100;
     color: white;
 }
 
-#navMenu{
-    overflow: hidden;
-    background-color: black;
-    margin: 0px;
+#findArtists{
+    display: none;
 }
 
-#navMenu a{
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-}
-
-#navMenu ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#logo img{
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -130%);
-    z-index: 1; 
+#contact{
+    display: none;
 }
