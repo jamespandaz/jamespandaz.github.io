@@ -40,3 +40,13 @@ body{
     margin: 0;
     padding: 0;
 }
+
+#logo img{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    z-index: 1; 
+}
