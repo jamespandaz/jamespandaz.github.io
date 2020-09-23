@@ -21,7 +21,8 @@ $(window).on("hashchange", function(e){
     // If trying to access hash that is not included in acceptedHash array
     // redirect to home page
     if(!acceptedHash.includes(newHash)) {
-        window.location.hash = '#home'
+        newHash = '#home';
+        return
     }
     
     $(newHash).fadeToggle();
