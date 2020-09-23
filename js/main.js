@@ -33,16 +33,10 @@ function homePageHide(){
     $('#logo img').fadeOut();
 }
 
-/* function aboutUsShow(){
-    $('#aboutUs h1').fadeIn();
-    $('#aboutUs p').fadeIn();
-}*/
-
 function aboutUsShow(){
     $("#aboutUs").fadeIn();
 }
 
 function aboutUsHide(){
-    $('#aboutUs h1').fadeOut();
-    $('#aboutUs p').fadeOut();
+    $("#aboutUs").fadeOut();
 }

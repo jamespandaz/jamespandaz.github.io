@@ -40,15 +40,15 @@ body{
     margin-bottom: 5px;
 }
 
-#aboutUs h1{
+#aboutUs {
     display: none;
+}
 
+#aboutUs h1{
     color: white;
 }
 
 #aboutUs p{
-    display: none;
-
     color: white;
 }
 
