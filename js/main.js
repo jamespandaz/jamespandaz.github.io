@@ -22,11 +22,14 @@ $(window).on("hashchange", function(e){
     // redirect to home page
     if(!acceptedHash.includes(newHash)) {
         newHash = '#home';
-        return
+    }
+
+    if(!acceptedHash.includes(oldHash)) {
+        oldHash = '#home';
     }
     
-    $(newHash).fadeToggle();
     $(oldHash).fadeToggle();
+    $(newHash).fadeToggle();
 
 })
 
