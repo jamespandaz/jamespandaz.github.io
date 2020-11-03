@@ -12,11 +12,13 @@ h1{
 }
 
 #backgroundTitleVideo{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    position: absolute;
+    right: -10px;
+    left: 10px;
+    bottom: 0px;
+    width: 1900px;
+    object-fit: fill;
+    overflow:hidden;
 
     filter: opacity(60%);
     z-index: -1;
@@ -25,12 +27,12 @@ h1{
 #backgroundTitleVideo{
     color: white;
     text-align: right;
-    padding: 14px;
 }
 
 #backgroundTitleVideo a, a:visited{
     text-decoration: none;
     color: white;
+    padding-right: 21px;
 }
 
 #backgroundTitleVideo a:hover{
@@ -107,12 +109,59 @@ h1{
     font-family: 'Montserrat', sans-serif;  
     font-weight: 100;
     color: white;
+    padding: 14px;
 }
 
 #findArtists{
     display: none;
 }
 
+#artOf{
+    display: none;
+}
+
 #contact{
     display: none;
 }
+
+#reviews{
+    position: relative;
+    background: #707a7e;
+}
+
+.review{
+    display: none;
+    padding: 80px;
+    text-align: center;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+#map{
+    display:none;
+}
+

@@ -4,9 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="media/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="media/favicon.png" type="image/png"/>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyD2Sf8VccLrGj_FqgQ0A_X9m6ntuxe9sZw"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="jquery.ui.map.full.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 
@@ -24,7 +26,7 @@
     <div id="home">
         <div id="backgroundTitleVideo">
             <video autoplay muted loop>
-                <source src="media/homePageVideo.mp4" type="video/mp4">
+                <source src="media/bgvideo.mp4" type="video/mp4">
             </video>
 
             <p><a href="https://www.pexels.com/@cottonbro" target="_blank">Source: cottonbro</a></p>
@@ -32,7 +34,7 @@
 
         <div id="heading">
             <h1>InkDiscover</h1>
-            <p>This is a place holder tagline</p>
+            <p>Discover lifelong art</p>
         </div>
 
         <div id="logo">
@@ -40,13 +42,9 @@
         </div>
     </div>
 
-    <div id="findArtists">
-        <h1> Find Artists</h1>
-    </div>
-
     <div id="aboutUs">
         <h1>About Us</h1>
-        <p>InkDiscover is an application designed to help make your next decision as easy as possible. 
+        <p>"InkDiscover is an application designed to help make your next decision as easy as possible. 
             Whether you know what you want or are browsing, we can find the right artist for you. From tradtional styles to realism, from 
         colour to black and grey, we have artists and studios to match what you want.</p>
 
@@ -57,17 +55,36 @@
         <h2>Reviews</h2>
 
         <div id="reviews">
-            <div id="review1">
-                <p>"InkDiscover helped me find the perfect Japanese artist for my sleeve. The site helped me sift through many artists unti
+            <div class="review">
+                <p>"InkDiscover helped me find the perfect Japanese artist for my sleeve. The site helped me sift through many artists until
                     I found the perfect one. The site showed me where the studio was so I could make sure I knew how to get there and 
                     contacting the artists was so easy from there."
                 </p>
             </div>
+            <div class="review">
+                <p>"The site gave me so much inspiration. Even if I didn't know what I want, going through different artists gave me an idea of 
+                    styles I really enjoyed." 
+                </p>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!--next and previous buttons-->
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+    </div>
+
+    <div id="findArtists">
+        <h1> Find Artists</h1>
+    </div>
+
+    <div id="artOf">
+        <h1>The Art of Tattooing</h1>
     </div>
 
     <div id="contact">
         <h1>Contact Us</h1>
+
+        <div id=map>
+        </div>
     </div>
     
 </body>
