@@ -1,4 +1,4 @@
-var acceptedHash = ['#home', '#aboutUs', '#findArtists', '#artOf', '#contact', '#thankYou'];
+var acceptedHash = ['#home', '#aboutUs', '#findArtists', '#artOf', '#contact'];
 
 $(document).ready(function(){
 
@@ -30,14 +30,14 @@ $(window).on("hashchange", function(e){
     });
 })
 
-fucntion googleMap(){
+/* fucntion googleMap(){
     var mapProp={
         center: new google.maps.LatLng(-33.773708, 151.112714),
         zoom:5;
     };
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
-
+*/
 var reviewIndex = 1;
 showReview(reviewIndex);
 
@@ -51,12 +51,14 @@ function currentReview(n){
 
 function showReview(n){
     var i;
-    var reviews = document.getElementById("review");
+    var reviews = document.getElementById("#reviewContent");
 
     if (n > reviews.length) {reviewIndex = 1}
         if (n < 1) {reviewIndex = review.length}
         for (i=0; i < reviews.length; i++){
             reviews[i].style.display = "none";
         }
-}   
+
+    reviews[reviewIndex-1].style.display = "block";
+} 
 
