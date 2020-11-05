@@ -38,7 +38,7 @@ $(window).on("hashchange", function(e){
     var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 */
-var reviewIndex = 1;
+/* var reviewIndex = 1;
 showReview(reviewIndex);
 
 function plusReview(n){
@@ -60,5 +60,19 @@ function showReview(n){
         }
 
     reviews[reviewIndex-1].style.display = "block";
-} 
+} */
 
+
+var coll = document.getElementsByClassName("accordian");
+var i;
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
